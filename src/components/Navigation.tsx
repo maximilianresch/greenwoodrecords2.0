@@ -1,7 +1,7 @@
 import * as React from "react";
 import styles from "./index.module.css";
+import useResponsive from '../helper/useResponsive';
 import {
-  useMediaQuery,
   Box,
   List,
   ListItem,
@@ -46,12 +46,12 @@ const menuLinks = [
 ];
 
 export const Navigation: React.FC = () => {
-  const [isLargerThan1280] = useMediaQuery("(min-width: 1024px)");
+  const {isDesktop} = useResponsive();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <Box className={styles.nav}>
-      {isLargerThan1280 ? (
+      {isDesktop ? (
         <Stack direction="row" spacing="20px">
           <Box bg="tomato" h="auto" w="100%" >
             <List d="flex" justifyContent="space-around">
