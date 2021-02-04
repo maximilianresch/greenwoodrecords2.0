@@ -4,7 +4,12 @@ import { TiChevronRight, TiChevronLeft } from "react-icons/ti";
 import styles from "./index.module.css";
 import Image from "next/image";
 
-export const SliderData = [
+interface Data {
+  image: string,
+  alt: string,
+}
+
+const SliderData: Data[] = [
   {
     image: "/Slider/Aufnahmeraum1dark-min.jpg",
     alt: "Aufnahmeraum1dark",

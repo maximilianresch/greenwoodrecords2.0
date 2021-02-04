@@ -4,11 +4,11 @@ import { Main } from '../components/Main'
 import { Footer } from '../components/Footer'
 import {ImageSlider} from '../components/ImageSlider'
 import {Navigation} from '../components/Navigation'
-import {Contact} from '../components/Contact'
-import {Gallery} from '../components/Gallery'
-import {Studio} from '../components/Studio'
-import {Services} from '../components/Services'
-import {Equipment} from '../components/Equipment'
+import Contact from './sections/Contact'
+import Gallery from './sections/Gallery'
+import Studio from './sections/Studio'
+import Services from './sections/Services'
+import Equipment from './sections/Equipment'
 
 
 

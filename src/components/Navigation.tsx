@@ -21,8 +21,12 @@ import {
 } from "@chakra-ui/react";
 import { BsMusicNoteList } from "react-icons/bs";
 
+interface Links {
+  name: string,
+  href: string
+}
 
-const menuLinks = [
+const MenuLinks: Links[] = [
   {
     name: "Studio",
     href: "#studio",
@@ -55,10 +59,10 @@ export const Navigation: React.FC = () => {
         <Stack direction="row" spacing="20px">
           <Box bg="tomato" h="auto" w="100%" >
             <List d="flex" justifyContent="space-around">
-              {menuLinks.map((link) => {
+              {MenuLinks.map((link) => {
                 return (
-                  <Link>
-                    <ListItem href={link.href}>{link.name}</ListItem>
+                  <Link href={link.href}>
+                    <ListItem >{link.name}</ListItem>
                   </Link>
                 );
               })}
@@ -91,7 +95,7 @@ export const Navigation: React.FC = () => {
                       Basic Drawer
                     </DrawerHeader>
                     <DrawerBody>
-                      {menuLinks.map((link, i) => {
+                      {MenuLinks.map((link, i) => {
                         return (
                           <Link href={link.href}>
                             <MenuItem key={i}>{link.name}</MenuItem>

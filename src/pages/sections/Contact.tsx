@@ -1,9 +1,9 @@
 import {Box} from '@chakra-ui/react'
 
-export const Studio: React.FC = () => {
+export default function Contact() {
     return (
         <div>
-            <Box>studio</Box>
+            <Box>Contact</Box>
         </div>
     )
 }
