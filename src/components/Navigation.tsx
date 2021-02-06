@@ -59,10 +59,10 @@ export const Navigation: React.FC = () => {
         <Stack direction="row" spacing="20px">
           <Box bg="tomato" h="auto" w="100%" >
             <List d="flex" justifyContent="space-around">
-              {MenuLinks.map((link) => {
+              {MenuLinks.map((link, i) => {
                 return (
                   <Link href={link.href}>
-                    <ListItem >{link.name}</ListItem>
+                    <ListItem key={i}>{link.name}</ListItem>
                   </Link>
                 );
               })}

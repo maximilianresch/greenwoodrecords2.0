@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Box, Image, Wrap, WrapItem, Center, Divider } from "@chakra-ui/react";
-import styles from "./index.module.css";
 
 interface CardProps {
   image: string;
@@ -17,7 +16,7 @@ export const StudioCard: React.FC<CardProps> = ({
 }) => {
   return (
     <div>
-      <Box className={styles.card}>
+      <Box>
         <Wrap spacing="30px" p="20px">
           <WrapItem>
             <Center>

@@ -1,49 +1,48 @@
 import * as React from "react";
-import { Box, Center, Divider } from "@chakra-ui/react";
+import { Box, Center, Image } from "@chakra-ui/react";
 
 interface CardProps {
+  image: string;
   title: string;
-  firstline: string;
-  secondline: string;
-  thirdline?: string;
+  subtitle?: string;
+  text: string;
 }
 
-export const ServiceCard: React.FC<CardProps> = ({
+export const ContactCard: React.FC<CardProps> = ({
+  image,
   title,
-  firstline,
-  secondline,
-  thirdline,
+  subtitle,
+  text,
 }) => {
   return (
     <div>
+      {" "}
+      <Box>
         <Center>
           <Box
             borderWidth="1px"
             borderRadius="lg"
-            borderColor="white"
-            bgColor="purple.900"
+            borderColor="#332E42"
+            overflow="hidden"
+            bgColor="#332E42"
             color="white"
           >
+            <Image src={image} />
             <Box p="6">
               <Box
                 mt="1"
                 fontWeight="semibold"
-                as="h4"
                 lineHeight="tight"
                 isTruncated
               >
                 {title}
               </Box>
-              <Box>
-                {firstline} <br />
-                {secondline} <br />
-                {thirdline} <br />
-              </Box>
-              <Divider />
-              exkl. 20% MwSt.
+              <Box>{subtitle}</Box>
+              <Box>{text}</Box>
             </Box>
           </Box>
         </Center>
+      </Box>
     </div>
   );
 };
