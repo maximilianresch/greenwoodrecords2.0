@@ -20,9 +20,9 @@ const Index = () => (
       <Services />
       <Gallery />
       <Contact />
-      <Footer />
+     
     </Main>
-
+    <Footer />
     {/* <DarkModeSwitch /> */}
    
   </Container>
