@@ -1,37 +1,50 @@
-import { Grid, GridItem, Box } from "@chakra-ui/react";
-import Image from "next/image";
+import {
+  Box,
+  HStack,
+  Heading,
+  Image,
+} from "@chakra-ui/react";
+
+interface Images {
+  image: string;
+  alt: string;
+}
+
+const GalleryData: Images[] = [
+  {
+    image: "/Gallery/couch-min.jpg",
+    alt: "",
+  },
+  {
+    image: "/Gallery/Flügel-min.jpg",
+    alt: "",
+  },
+  {
+    image: "/Gallery/GalerieFoto1-min.jpg",
+    alt: "",
+  },
+  {
+    image: "/Gallery/GalerieFoto2-min.jpg",
+    alt: "",
+  },
+  {
+    image: "/Gallery/Serverraum-min.jpg",
+    alt: "",
+  },
+];
 
 export default function Gallery() {
   return (
     <div>
-      <Box >
-        <Grid
-          h="200px"
-          templateRows="repeat(2, 1fr)"
-          templateColumns="repeat(5, 1fr)"
-          gap={4}
-        >
-          <GridItem rowSpan={2} colSpan={1} bg="tomato">
-            <Image
-              layout="responsive"
-              width={200}
-              height={200}
-              src="/Gallery/couch-min.jpg"
-            />
-          </GridItem>
-          <GridItem colSpan={2} bg="papayawhip">
-            <Image
-              layout="responsive"
-              width={200}
-              height={200}
-              src="/Gallery/Flügel-min.jpg"
-            />
-          </GridItem>
-          {/* <GridItem colSpan={2} bg="papayawhip" ><Image  src="/Gallery/GalerieFoto1-min.jpg" /></GridItem>
-          <GridItem colSpan={4} bg="tomato" ><Image  src="/Gallery/GalerieFoto2-min.jpg" /></GridItem>
-          <GridItem colSpan={4} bg="tomato" ><Image  src="/Gallery/Serverraum-min.jpg" /></GridItem>
-       */}{" "}
-        </Grid>
+      <Heading>Galerie</Heading>
+      <Box overflowX="scroll">
+      <HStack wrap="nowrap" spacing="5">
+        {GalleryData.map((data) => {
+          return (
+              <Image w="100%" h="400px" src={data.image} />
+          )
+        })}
+      </HStack>
       </Box>
     </div>
   );

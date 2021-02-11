@@ -4,7 +4,8 @@ import { ContactCard } from "../../components/ContactCard";
 export default function Contact() {
   return (
     <div>
-      <Box position="absolute">
+      <Heading>Contact</Heading>
+      <Box>
         <Stack direction={["column", "row"]} align="center" justify="center" spacing="20">
           <Box w={[300, 500]} >
             <ContactCard

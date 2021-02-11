@@ -1,9 +1,10 @@
-import { Box, Stack } from "@chakra-ui/react";
+import { Box, Stack , Heading} from "@chakra-ui/react";
 import { ServiceCard } from "../../components/ServiceCard";
 
 export default function Services() {
   return (
     <div>
+      <Heading>Leistungen</Heading>
         <Box pt="40px">
       <Stack direction={["column", "row"]} spacing={["20px", "60px"]} align="center" justify="center">
         <ServiceCard

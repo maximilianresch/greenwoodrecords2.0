@@ -43,6 +43,8 @@
 .nav {
     z-index: 20;
     width: 100%;
+    position: sticky;
+    top: 0;
 }
 
 /* COMPONENTS */

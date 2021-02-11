@@ -1,10 +1,8 @@
 import {
   Box,
   Table,
-  Thead,
   Tbody,
   Tr,
-  Th,
   Td,
   TableCaption,
   Tabs,
@@ -12,12 +10,13 @@ import {
   TabPanels,
   Tab,
   TabPanel,
+  Heading
 } from "@chakra-ui/react";
 
 export default function Equipment() {
   return (
     <div id="equipment">
-      <h2>Equipment</h2>
+      <Heading>Equipment</Heading>
       <Tabs size="sm" align="center" isFitted variant="enclosed">
         <TabList>
           <Tab>Mikrofone</Tab>
