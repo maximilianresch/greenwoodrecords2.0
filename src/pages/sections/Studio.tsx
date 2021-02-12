@@ -1,10 +1,32 @@
-import { Box, Stack, Heading, Text } from "@chakra-ui/react";
+import { Box, Stack, Heading, Text, Image} from "@chakra-ui/react";
 import { StudioCard } from "../../components/StudioCard";
 
 export default function Studio() {
   return (
     <div id="studio">
-      <Heading pt="40px" pb="30px" as="h1" size="xl">Studio</Heading>
+      <Box pt="20" pb="20" textAlign="center">
+        <Stack d="flex" justify="space-evenly" direction="row">
+          <Box>
+            <Image src="/ImageCall.png" w="100px" />{" "}
+            <Heading size="sm">1. Kontakt aufnehmen</Heading>
+            Lorem ipsum 
+          </Box>
+          <Box>
+            {" "}
+            <Image src="/ImageDeal.png" w="100px" />
+            <Heading size="sm">2. Details besprechen</Heading>
+            Lorem ipsum 
+          </Box>
+          <Box>
+            <Image src="/ImageRecord.png" w="100px" />
+            <Heading size="sm">3. Aufnahmen starten</Heading>
+            Lorem ipsum 
+          </Box>
+        </Stack>
+      </Box>
+      <Heading pt="40px" pb="30px" as="h1" size="xl">
+        Studio
+      </Heading>
       <Box pt="10px" p="5px">
         <Text align="justify">
           Aus einer alten Traktorgarage für unseren Weinbetrieb wurde mit viel
@@ -52,4 +74,4 @@ export default function Studio() {
       </Box>
     </div>
   );
-};
+}

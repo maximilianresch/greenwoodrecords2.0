@@ -1,6 +1,6 @@
 import { Container } from "../components/Container";
 import { Main } from "../components/Main";
-// import { DarkModeSwitch } from '../components/DarkModeSwitch'
+import { DarkModeSwitch } from '../components/DarkModeSwitch'
 import { ImageSlider } from "../components/ImageSlider";
 import { Navigation } from "../components/Navigation";
 import Contact from "./sections/Contact";
@@ -24,7 +24,7 @@ const Index = () => (
      <Media />
     </Main>
     <Footer />
-    {/* <DarkModeSwitch /> */}
+    <DarkModeSwitch />
    
   </Container>
 );

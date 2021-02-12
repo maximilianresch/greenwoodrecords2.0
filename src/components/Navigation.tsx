@@ -1,6 +1,6 @@
 import * as React from "react";
 import styles from "./index.module.css";
-import useResponsive from '../helper/useResponsive';
+import useResponsive from "../helper/useResponsive";
 import {
   Box,
   List,
@@ -20,11 +20,11 @@ import {
   useDisclosure,
   Heading,
 } from "@chakra-ui/react";
-import { BsMusicNoteList } from "react-icons/bs";
+import { BiMenuAltRight } from "react-icons/bi";
 
 interface Links {
-  name: string,
-  href: string
+  name: string;
+  href: string;
 }
 
 const MenuLinks: Links[] = [
@@ -51,22 +51,22 @@ const MenuLinks: Links[] = [
 ];
 
 export const Navigation: React.FC = () => {
-  const {isDesktop} = useResponsive();
+  const { isDesktop } = useResponsive();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <Box className={styles.nav}>
       {isDesktop ? (
         <Stack direction="row" spacing="20px" p="10px" fontSize="x-large">
-          <Box h="auto" w="100%" >
+          <Box h="auto" w="100%">
             <List d="flex" justifyContent="space-around">
               <Link href="#top">
-              <Heading >greenwoodrecords</Heading>
+                <Heading>greenwoodrecords</Heading>
               </Link>
               {MenuLinks.map((link, i) => {
                 return (
                   <Link key={i} href={link.href}>
-                    <ListItem >{link.name}</ListItem>
+                    <ListItem>{link.name}</ListItem>
                   </Link>
                 );
               })}
@@ -74,11 +74,7 @@ export const Navigation: React.FC = () => {
           </Box>
         </Stack>
       ) : (
-        <HStack
-          direction="row"
-          justify="space-between"
-          p="7px"
-        >
+        <HStack direction="row" justify="space-between" p="7px">
           <Box pl="15px">
             <Link fontSize="25px">greenwoodrecords</Link>
           </Box>
@@ -88,9 +84,9 @@ export const Navigation: React.FC = () => {
                 onClick={onOpen}
                 as={Button}
                 aria-label="Call Sage"
-                icon={<BsMusicNoteList fontSize="25px" />}
-                fontSize="20px"
+                icon={<BiMenuAltRight fontSize="30px" />}
                 color="black"
+                size="sm"
               />
               <Drawer placement={"top"} onClose={onClose} isOpen={isOpen}>
                 <DrawerOverlay>
@@ -102,7 +98,7 @@ export const Navigation: React.FC = () => {
                       {MenuLinks.map((link, i) => {
                         return (
                           <Link key={i} href={link.href}>
-                            <MenuItem >{link.name}</MenuItem>
+                            <MenuItem>{link.name}</MenuItem>
                           </Link>
                         );
                       })}
