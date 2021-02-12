@@ -4,9 +4,9 @@ import { StudioCard } from "../../components/StudioCard";
 export default function Studio() {
   return (
     <div id="studio">
-      <Heading>Studio</Heading>
-      <Box>
-        <Text>
+      <Heading pt="40px" pb="30px" as="h1" size="xl">Studio</Heading>
+      <Box pt="10px" p="5px">
+        <Text align="justify">
           Aus einer alten Traktorgarage für unseren Weinbetrieb wurde mit viel
           Arbeit ein Tonstudio geschaffen. Der Bau war eine große
           Herausforderung und unterzog sich langer Planungszeit. Jetzt freuen
@@ -21,8 +21,8 @@ export default function Studio() {
           miteinander verbunden.
         </Text>
       </Box>
-      <Box>
-        <Stack direction={["column", "row"]} spacing="24px">
+      <Box pt="40px">
+        <Stack direction={["column", "row"]} spacing="18px">
           <StudioCard
             image="/Slider/Aufnahmeraum1dark-min.jpg"
             title="Aufnahmeraum 1"

@@ -35,13 +35,13 @@ const GalleryData: Images[] = [
 
 export default function Gallery() {
   return (
-    <div>
-      <Heading>Galerie</Heading>
+    <div id="gallery">
+      <Heading pt="40px" pb="30px" as="h1" size="xl">Galerie</Heading>
       <Box overflowX="scroll">
       <HStack wrap="nowrap" spacing="5">
-        {GalleryData.map((data) => {
+        {GalleryData.map((data, i) => {
           return (
-              <Image w="100%" h="400px" src={data.image} />
+              <Image key={i} w="100%" h="350px" src={data.image} />
           )
         })}
       </HStack>

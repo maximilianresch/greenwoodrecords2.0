@@ -1,12 +1,17 @@
-import { Box, Stack , Heading} from "@chakra-ui/react";
+import { Box, Stack , Heading } from "@chakra-ui/react";
+import Image from 'next/image'
 import { ServiceCard } from "../../components/ServiceCard";
 
 export default function Services() {
   return (
-    <div>
-      <Heading>Leistungen</Heading>
-        <Box pt="40px">
-      <Stack direction={["column", "row"]} spacing={["20px", "60px"]} align="center" justify="center">
+    <div id="services">
+      <Heading pt="40px" pb="30px" as="h1" size="xl">Leistungen</Heading>
+        <Box>
+        <Image src='/RegieMischpult-min.jpg' alt="großes Foto vom Mischpult in der Regie"  
+      layout="responsive"
+      width={700}
+      height={475} />
+      <Stack direction={["column", "row"]} spacing={["20px", "60px"]} align="center" justify="center" mt="-10" position="relative">
         <ServiceCard
           title="Aufnahme mit Techniker"
           firstline="550€ pro Tag"

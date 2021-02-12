@@ -3,8 +3,8 @@ import { ContactCard } from "../../components/ContactCard";
 
 export default function Contact() {
   return (
-    <div>
-      <Heading>Contact</Heading>
+    <div id="contact">
+      <Heading pt="40px" pb="30px" as="h1" size="xl">Contact</Heading>
       <Box>
         <Stack direction={["column", "row"]} align="center" justify="center" spacing="20">
           <Box w={[300, 500]} >

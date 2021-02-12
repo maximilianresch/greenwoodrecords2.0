@@ -29,26 +29,17 @@ export default function Footer() {
           <div> office@greenwoodrecords.at</div>
           <div> +43 660 3002487 </div>
           <div className={style.icons}>
-            <Link
-              prefetch={false}
-              href="https://www.facebook.com/Greenwoodrecords-104374568346681"
-            >
+            <Link href="https://www.facebook.com/Greenwoodrecords-104374568346681">
               <a target="_blank" className={style.facebookIcon}>
                 <Icon as={AiFillFacebook} />
               </a>
             </Link>
-            <Link
-              href="https://www.instagram.com/greenwood_records/"
-              prefetch={false}
-            >
+            <Link href="https://www.instagram.com/greenwood_records/">
               <a target="_blank" className={style.instagramIcon}>
                 <Icon as={AiOutlineInstagram} />
               </a>
             </Link>
-            <Link
-              href="https://www.youtube.com/channel/UCM3BVjkQJ52tvrp2U3FaXeQ/featured"
-              prefetch={false}
-            >
+            <Link href="https://www.youtube.com/channel/UCM3BVjkQJ52tvrp2U3FaXeQ/featured">
               <a target="_blank" className={style.youtubeIcon}>
                 <Icon as={AiFillYoutube} />
               </a>

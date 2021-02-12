@@ -9,6 +9,7 @@ import Studio from "./sections/Studio";
 import Services from "./sections/Services";
 import Equipment from "./sections/Equipment";
 import Footer from './sections/Footer';
+import Media from './sections/Media';
 
 const Index = () => (
   <Container>
@@ -20,7 +21,7 @@ const Index = () => (
       <Services />
       <Gallery />
       <Contact />
-     
+     <Media />
     </Main>
     <Footer />
     {/* <DarkModeSwitch /> */}

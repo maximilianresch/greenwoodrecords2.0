@@ -18,6 +18,7 @@ import {
   DrawerOverlay,
   DrawerContent,
   useDisclosure,
+  Heading,
 } from "@chakra-ui/react";
 import { BsMusicNoteList } from "react-icons/bs";
 
@@ -56,13 +57,16 @@ export const Navigation: React.FC = () => {
   return (
     <Box className={styles.nav}>
       {isDesktop ? (
-        <Stack direction="row" spacing="20px">
-          <Box bg="tomato" h="auto" w="100%" >
+        <Stack direction="row" spacing="20px" p="10px" fontSize="x-large">
+          <Box h="auto" w="100%" >
             <List d="flex" justifyContent="space-around">
+              <Link href="#top">
+              <Heading >greenwoodrecords</Heading>
+              </Link>
               {MenuLinks.map((link, i) => {
                 return (
-                  <Link href={link.href}>
-                    <ListItem key={i}>{link.name}</ListItem>
+                  <Link key={i} href={link.href}>
+                    <ListItem >{link.name}</ListItem>
                   </Link>
                 );
               })}
@@ -73,7 +77,7 @@ export const Navigation: React.FC = () => {
         <HStack
           direction="row"
           justify="space-between"
-          bgColor="blue.500"
+          p="7px"
         >
           <Box pl="15px">
             <Link fontSize="25px">greenwoodrecords</Link>
@@ -97,8 +101,8 @@ export const Navigation: React.FC = () => {
                     <DrawerBody>
                       {MenuLinks.map((link, i) => {
                         return (
-                          <Link href={link.href}>
-                            <MenuItem key={i}>{link.name}</MenuItem>
+                          <Link key={i} href={link.href}>
+                            <MenuItem >{link.name}</MenuItem>
                           </Link>
                         );
                       })}

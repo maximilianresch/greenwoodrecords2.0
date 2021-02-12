@@ -45,7 +45,7 @@ export const ImageSlider: React.FC = () => {
   }, [current, length]);
 
   return (
-    <div className={styles.slider}>
+    <div className={styles.slider} id="top">
       <TiChevronLeft className={styles.leftArrow} onClick={prevSlide} />
       <TiChevronRight className={styles.rightArrow} onClick={nextSlide} />
       {SliderData.map((data, i) => {
@@ -65,7 +65,7 @@ export const ImageSlider: React.FC = () => {
                 alt={data.alt}
                 layout="intrinsic"
                 width={1400}
-                height={950}
+                height={1000}
               />
             )}
           </Box>

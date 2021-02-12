@@ -12,13 +12,21 @@ import {
   TabPanel,
   Heading
 } from "@chakra-ui/react";
+import style from './style.module.css'
+import Image from 'next/image'
 
 export default function Equipment() {
   return (
     <div id="equipment">
-      <Heading>Equipment</Heading>
-      <Tabs size="sm" align="center" isFitted variant="enclosed">
-        <TabList>
+      <Heading pt="40px" pb="30px" as="h1" size="xl">Equipment</Heading>
+      <Box className={style.img} >
+      <Image   src='/Equipment-min.jpg' alt="Foto vom Equipment und Rack"  
+      layout="responsive"
+      width={700}
+      height={475} />
+      </Box>
+      <Tabs pt="16" size="sm" align="center" isFitted variant="enclosed">
+        <TabList flexWrap="wrap">
           <Tab>Mikrofone</Tab>
           <Tab>Instrumente</Tab>
           <Tab>Outboard + Monitore</Tab>

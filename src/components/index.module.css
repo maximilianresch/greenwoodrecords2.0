@@ -1,50 +1,50 @@
 /* Slider */
 
-.slider{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+.slider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-
-.rightArrow{
-    position: absolute;
-    top: 50%;
-    right: 32px;
-    font-size: 20px;
-    z-index: 10;
-    cursor: pointer;
-    user-select: none;
+.rightArrow {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  font-size: 20px;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
 }
 
-
-.leftArrow{
-    position: absolute;
-    top: 50%;
-    left: 32px;
-    font-size: 20px;
-    z-index: 10;
-    cursor: pointer;
-    user-select: none;
+.leftArrow {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  font-size: 20px;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
 }
 
-.slide{
-    opacity: 0;
+.slide {
+  opacity: 0;
 }
 
 .slide.active {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Navigation */
 
 .nav {
-    z-index: 20;
-    width: 100%;
-    position: sticky;
-    top: 0;
+  z-index: 20;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: #343a40;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* COMPONENTS */
