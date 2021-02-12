@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Center, Image } from "@chakra-ui/react";
+import { Box, Center, Heading, Image, Divider } from "@chakra-ui/react";
 
 interface CardProps {
   image: string;
@@ -22,22 +22,21 @@ export const ContactCard: React.FC<CardProps> = ({
           <Box
             borderWidth="1px"
             borderRadius="lg"
-            borderColor="#332E42"
             overflow="hidden"
-            bgColor="#332E42"
+            bgColor="#538F1E"
             color="white"
           >
             <Image src={image} />
-            <Box p="6">
-              <Box
-                mt="1"
-                fontWeight="semibold"
+            <Box p="4" >
+              <Heading
                 lineHeight="tight"
+                size="lg"
                 isTruncated
               >
                 {title}
-              </Box>
-              <Box>{subtitle}</Box>
+              </Heading>
+              <Heading size="md">{subtitle}</Heading>
+              <Divider />
               <Box>{text}</Box>
             </Box>
           </Box>

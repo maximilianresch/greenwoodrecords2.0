@@ -1,29 +1,9 @@
-import { Box, Stack, Heading, Text, Image} from "@chakra-ui/react";
+import { Box, Stack, Heading, Text} from "@chakra-ui/react";
 import { StudioCard } from "../../components/StudioCard";
 
 export default function Studio() {
   return (
     <div id="studio">
-      <Box pt="20" pb="20" textAlign="center">
-        <Stack d="flex" justify="space-evenly" direction="row">
-          <Box>
-            <Image src="/ImageCall.png" w="100px" />{" "}
-            <Heading size="sm">1. Kontakt aufnehmen</Heading>
-            Lorem ipsum 
-          </Box>
-          <Box>
-            {" "}
-            <Image src="/ImageDeal.png" w="100px" />
-            <Heading size="sm">2. Details besprechen</Heading>
-            Lorem ipsum 
-          </Box>
-          <Box>
-            <Image src="/ImageRecord.png" w="100px" />
-            <Heading size="sm">3. Aufnahmen starten</Heading>
-            Lorem ipsum 
-          </Box>
-        </Stack>
-      </Box>
       <Heading pt="40px" pb="30px" as="h1" size="xl">
         Studio
       </Heading>
@@ -44,7 +24,7 @@ export default function Studio() {
         </Text>
       </Box>
       <Box pt="40px">
-        <Stack direction={["column", "row"]} spacing="18px">
+        <Stack direction={["column", "row"]} align="center"  spacing="18px">
           <StudioCard
             image="/Slider/Aufnahmeraum1dark-min.jpg"
             title="Aufnahmeraum 1"

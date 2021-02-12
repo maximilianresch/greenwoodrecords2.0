@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Image, Wrap, WrapItem, Center, Divider } from "@chakra-ui/react";
+import { Box, Image, Center, Divider, Stack, Heading } from "@chakra-ui/react";
 
 interface CardProps {
   image: string;
@@ -17,28 +17,28 @@ export const StudioCard: React.FC<CardProps> = ({
   return (
     <div>
       <Box>
-        <Wrap spacing="30px" p="20px">
-          <WrapItem>
+        <Stack spacing="30px" >
+          <Box>
             <Center>
               <Box
                 borderWidth="1px"
                 borderRadius="lg"
-                borderColor="#332E42"
                 overflow="hidden"
-                bgColor="#332E42"
+                shadow="dark-lg"
+                bgColor="#0D0D0D"
                 color="white"
               >
                 <Image src={image} />
                 <Box p="6">
-                  <Box
+                  <Heading
                     mt="1"
                     fontWeight="semibold"
                     as="h4"
                     lineHeight="tight"
-                    isTruncated
+                    size="md"
                   >
                     {title}
-                  </Box>
+                  </Heading>
                   <Box>
                     {area} m<sup>2</sup>
                   </Box>
@@ -47,8 +47,8 @@ export const StudioCard: React.FC<CardProps> = ({
                 </Box>
               </Box>
             </Center>
-          </WrapItem>
-        </Wrap>
+          </Box>
+        </Stack>
       </Box>
     </div>
   );

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Center, Image, Link } from "@chakra-ui/react";
+import { Box, Center, Image, Link, Heading } from "@chakra-ui/react";
 
 interface CardProps {
   image: string;
@@ -26,19 +26,19 @@ export const MediaCard: React.FC<CardProps> = ({
           <Box
             borderWidth="1px"
             borderRadius="lg"
-            borderColor="#332E42"
+            shadow="dark-lg"
             overflow="hidden"
-            bgColor="#332E42"
+            bgColor="#17204A"
             color="white"
           >
             <Image src={image} />
             <Box p="6">
-              <Box mt="1" fontWeight="semibold" lineHeight="tight" isTruncated>
+              <Heading size="lg" fontWeight="semibold" lineHeight="tight" isTruncated>
                 {title}
-              </Box>
+              </Heading>
               <Box>{subtitle}</Box>
               <Box>{text}</Box>
-              <Box pt="4" align="center"><Link target="_blank" color="blue.100" href={href}>{linktext}</Link></Box>
+              <Box pt="4" align="center"><Link target="_blank" color="teal.100" href={href}>{linktext}</Link></Box>
             </Box>
           </Box>
         </Center>

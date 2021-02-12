@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Center, Divider } from "@chakra-ui/react";
+import { Box, Divider, Heading } from "@chakra-ui/react";
 
 interface CardProps {
   title: string;
@@ -16,24 +16,25 @@ export const ServiceCard: React.FC<CardProps> = ({
 }) => {
   return (
     <div>
-        <Center>
+        <Box>
           <Box
             borderWidth="1px"
             borderRadius="lg"
-            borderColor="white"
-            bgColor="purple.900"
-            color="white"
+            borderColor="whiteAlpha.700"
+           shadow="md"
+            bgColor="#BFBFBF"
+            color="#0D0D0D"
           >
-            <Box p="6">
-              <Box
+            <Box p="4">
+              <Heading
                 mt="1"
+                size="md"
                 fontWeight="semibold"
-                as="h4"
                 lineHeight="tight"
                 isTruncated
               >
                 {title}
-              </Box>
+              </Heading>
               <Box>
                 {firstline} <br />
                 {secondline} <br />
@@ -43,7 +44,7 @@ export const ServiceCard: React.FC<CardProps> = ({
               exkl. 20% MwSt.
             </Box>
           </Box>
-        </Center>
+        </Box>
     </div>
   );
 };
