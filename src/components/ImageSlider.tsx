@@ -39,13 +39,13 @@ export const ImageSlider: React.FC = () => {
   React.useEffect(() => {
     const timeout = setTimeout(
       () => setCurrent((current + 1 + length) % length),
-      4000
+      6000
     );
     return () => clearTimeout(timeout);
   }, [current, length]);
 
   return (
-    <div className={styles.slider} id="top">
+    <Box className={styles.slider} id="top">
       <TiChevronLeft className={styles.leftArrow} onClick={prevSlide} />
       <TiChevronRight className={styles.rightArrow} onClick={nextSlide} />
       {SliderData.map((data, i) => {
@@ -71,6 +71,6 @@ export const ImageSlider: React.FC = () => {
           </Box>
         );
       })}
-    </div>
+    </Box>
   );
 };

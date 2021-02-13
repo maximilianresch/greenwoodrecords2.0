@@ -25,13 +25,16 @@ export default function Equipment() {
       width={700}
       height={475} />
       </Box>
-      <Tabs pt="16" size="sm" align="center" isFitted variant="enclosed">
+      
+      <Tabs pt="16" size="sm" align="center" isFitted variant="soft-rounded">
+      <Box>
         <TabList flexWrap="wrap">
           <Tab>Mikrofone</Tab>
           <Tab>Instrumente</Tab>
           <Tab>Outboard + Monitore</Tab>
           <Tab>Wandler</Tab>
         </TabList>
+        </Box>
 
         {/*Mikrofone*/}
         <TabPanels>

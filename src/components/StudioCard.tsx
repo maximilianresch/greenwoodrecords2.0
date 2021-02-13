@@ -42,8 +42,8 @@ export const StudioCard: React.FC<CardProps> = ({
                   <Box>
                     {area} m<sup>2</sup>
                   </Box>
-                  <Divider />
-                  <Box>{paragraph}</Box>
+                  <Divider pt="2"/>
+                  <Box pt="2">{paragraph}</Box>
                 </Box>
               </Box>
             </Center>

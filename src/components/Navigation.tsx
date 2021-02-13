@@ -76,9 +76,9 @@ export const Navigation: React.FC = () => {
       ) : (
         <HStack direction="row" justify="space-between" p="7px">
           <Box pl="15px">
-            <Link fontSize="25px">greenwoodrecords</Link>
+            <Link fontSize="25px" href="#top">greenwoodrecords</Link>
           </Box>
-          <Box pr="20px">
+          <Box  pr="20px">
             <Menu>
               <IconButton
                 onClick={onOpen}
@@ -91,10 +91,10 @@ export const Navigation: React.FC = () => {
               <Drawer placement={"top"} onClose={onClose} isOpen={isOpen}>
                 <DrawerOverlay>
                   <DrawerContent>
-                    <DrawerHeader borderBottomWidth="1px">
-                      Basic Drawer
+                    <DrawerHeader fontSize="x-large" borderBottomWidth="1px">
+                      greenwoodrecords
                     </DrawerHeader>
-                    <DrawerBody>
+                    <DrawerBody lineHeight="8" fontSize="xl">
                       {MenuLinks.map((link, i) => {
                         return (
                           <Link key={i} href={link.href}>

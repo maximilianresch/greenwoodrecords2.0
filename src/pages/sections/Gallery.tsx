@@ -1,9 +1,4 @@
-import {
-  Box,
-  HStack,
-  Heading,
-  Image,
-} from "@chakra-ui/react";
+import { Box, HStack, Heading, Image } from "@chakra-ui/react";
 
 interface Images {
   image: string;
@@ -36,15 +31,16 @@ const GalleryData: Images[] = [
 export default function Gallery() {
   return (
     <div id="gallery">
-      <Heading pt="40px" pb="30px" as="h1" size="xl">Galerie</Heading>
-      <Box overflowX="scroll">
-      <HStack wrap="nowrap" spacing="5">
-        {GalleryData.map((data, i) => {
-          return (
-              <Image key={i} w="100%" h="350px" src={data.image} />
-          )
-        })}
-      </HStack>
+      <Heading pt="40px" pb="30px" as="h1" size="xl">
+        Galerie
+      </Heading>
+
+      <Box overflowX="scroll" >
+        <HStack wrap="nowrap" spacing="5">
+          {GalleryData.map((data, i) => {
+            return <Image key={i} w="100%" h="350px" src={data.image} />;
+          })}
+        </HStack>
       </Box>
     </div>
   );
