@@ -11,10 +11,28 @@ export default function Footer() {
     <div className={style.footer}>
       <div>
         <span className={style.span}>
-          <p>© greenwoodrecords, record now</p>
-          <a>Impressum</a>
-          <a>AGB</a>
-          <a>Datenschutzerklärung</a>
+          <p>
+            {" "}
+            <Link href="/">© greenwoodrecords, record now </Link>
+          </p>
+          <div>
+            {" "}
+            <Link href="/impressum">
+              Impressum
+            </Link>
+          </div>
+          <div>
+            {" "}
+            <Link target="_blank" href="https://www.wko.at/branchen/gewerbe-handwerk/film-musikwirtschaft/AGB-Tonstudiobetriebe.pdf">
+              AGB
+            </Link>
+          </div>
+          <div>
+            {" "}
+            <Link href="/datenschutz">
+              Datenschutzerklärung
+            </Link>
+          </div>
         </span>
       </div>
       <div>

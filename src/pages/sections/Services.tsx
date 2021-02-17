@@ -21,7 +21,7 @@ export default function Services() {
           spacing={["20px", "60px"]}
           align="center"
           justify="center"
-          mt="-10"
+          mt={["2", "-28"]}
           position="relative"
         >
           <ServiceCard
