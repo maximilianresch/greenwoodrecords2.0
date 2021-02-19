@@ -23,7 +23,7 @@ export const ContactCard: React.FC<CardProps> = ({
             borderWidth="1px"
             borderRadius="lg"
             overflow="hidden"
-            bgColor="#538F1E"
+            bgColor="#4D5159"
             color="white"
           >
             <Image src={image} />

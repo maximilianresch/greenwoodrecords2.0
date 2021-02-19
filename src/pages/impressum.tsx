@@ -1,8 +1,12 @@
 import { Main } from "../components/Main";
+import Head from "next/head";
 
 export default function Impressum() {
   return (
-    <Main>
+    <Main p="10">
+      <Head>
+        <title>Greenwoodrecords - Impressum</title>
+      </Head>
       <h1 className="adsimple-221142003">Impressum</h1>
       <p className="adsimple-221142003">
         Informationspflicht laut §5 E-Commerce Gesetz, §14
@@ -118,12 +122,6 @@ export default function Impressum() {
         Die Bilder, Fotos und Grafiken auf dieser Webseite sind urheberrechtlich
         geschützt.
       </p>
-      <p>
-        Die Bilderrechte liegen bei den folgenden Fotografen und Unternehmen:
-      </p>
-      <ul className="adsimple-221142003">
-        <li className="adsimple-221142003">Fotograf Mustermann</li>
-      </ul>
       <p style={{ marginTop: "15px" }}>
         Quelle: Erstellt mit dem 
         <a

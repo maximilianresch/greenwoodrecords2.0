@@ -32,9 +32,9 @@ export default function Contact() {
                 <Text>Fabian Hainzl</Text>
                 <Text>
                   {" "}
-                  <Link color="teal.600" target="_blank" href="https://www.google.at/maps/place/Gf%C3%B6hler+Str.+34,+3552+Lengenfeld/@48.4728903,15.5862256,17.45z/data=!4m5!3m4!1s0x47729ac9005068f9:0xbb09cccce73d352c!8m2!3d48.4725018!4d15.587069">
+                  <Text>
                     Gföhlerstraße 34
-                  </Link>
+                  </Text>
                 </Text>
                 <Text>A-3552 Lengenfeld</Text>
                 <Text>
