@@ -16,8 +16,11 @@ const Index = () => (
   <Container>
     <Head>
       <title>Greenwoodrecords - Tonstudio</title>
-      <meta name="title" content="greenwoodrecords - Tonstudio - greenwood records greenwood-records by Fabian hainzl" />
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta
+        name="title"
+        content="greenwoodrecords - Tonstudio - greenwood records greenwood-records by Fabian hainzl"
+      />
+      <meta content="text/html; charset=utf-8" />
       <meta
         name="viewport"
         content="initial-scale=1, width=device-width"

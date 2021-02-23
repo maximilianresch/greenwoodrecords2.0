@@ -1,26 +1,30 @@
 import * as React from "react";
-import { Box } from "@chakra-ui/react";
+import { Box,  } from "@chakra-ui/react";
 import { TiChevronRight, TiChevronLeft } from "react-icons/ti";
 import styles from "./index.module.css";
-import Image from "next/image";
+import Image from 'next/image';
 
 interface Data {
-  image: string,
-  alt: string,
+  image: string;
+  alt: string;
+  key?: string;
 }
 
 const SliderData: Data[] = [
   {
     image: "/Slider/Aufnahmeraum1dark-min.jpg",
     alt: "Aufnahmeraum1dark",
+    key: "Aufnahmeraum1dark",
   },
   {
     image: "/Slider/Aufnahmeraum1-min.jpg",
     alt: "Aufnahmeraum1",
+    key: "Aufnahmeraum1",
   },
   {
     image: "/Slider/Regie-min.jpg",
     alt: "Regie",
+    key: "Regie",
   },
 ];
 
@@ -51,21 +55,23 @@ export const ImageSlider: React.FC = () => {
       {SliderData.map((data, i) => {
         return (
           <Box
+          key={data.key}
             className={
               i === current
                 ? `${styles.slide} ${styles.active} `
                 : `${styles.slider}`
             }
-            key={i}
           >
             {i === current && (
               <Image
+                priority={true}
                 className={styles.image}
                 src={data.image}
                 alt={data.alt}
                 layout="intrinsic"
                 width={1400}
-                height={1000}
+                height={980}
+                key={data.key}
               />
             )}
           </Box>
